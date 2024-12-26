@@ -39,13 +39,13 @@ const buttonHTML = `
 `;
 
 const addButtonsToSections = () => {
-  if (extensionSettings?.disableGlobally) {
+  if (extensionSettings.disableGlobally) {
     return;
   }
 
   if (
     window.location.href.includes("/tests/") &&
-    !extensionSettings?.enableQuizzes
+    !extensionSettings.enableQuizzes
   ) {
     return;
   }
@@ -152,6 +152,13 @@ const addButtonsToSections = () => {
           const replacementDiv = document.createElement("div");
           replacementDiv.textContent = markdownTable;
           table.replaceWith(replacementDiv);
+        }
+
+        for (const node of sectionClone.childNodes) {
+          if (node.nodeType === Node.TEXT_NODE) {
+            const spacing = extensionSettings.singleSpace ? "\n" : "\n\n";
+            node.textContent = node.textContent.replace(/\n+/g, spacing);
+          }
         }
 
         const textToCopy = sectionClone.textContent.trim();

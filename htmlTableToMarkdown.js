@@ -70,7 +70,7 @@ function htmlTableToMarkdown(tableElement) {
   }
   markdownString += tableRows;
 
-  return markdownString;
+  return markdownString.trim();
 }
 
 function fixText(text) {

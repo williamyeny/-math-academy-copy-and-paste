@@ -6,6 +6,10 @@ const SETTINGS = [
     id: "useNumbers",
     label: "Use numbers instead of Roman numerals for lists",
   },
+  {
+    id: "singleSpace",
+    label: "Convert to single-space instead of double-space",
+  },
 ];
 
 // Create settings checkboxes

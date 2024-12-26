@@ -1,7 +1,7 @@
 {
   "name": "Math Academy Copy and Paste",
   "description": "Allows easy copying and pasting of Math Academy questions, answers, explanations, and tutorials",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
   "action": {
     "default_popup": "settings.html",
