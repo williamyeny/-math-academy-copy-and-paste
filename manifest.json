@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "matches": ["*://mathacademy.com/*"],
-      "js": ["content.js", "mathml-to-latex.js"],
+      "js": ["content.js", "mathmlToLatex.js", "htmlTableToMarkdown.js"],
       "css": ["injected.css"]
     }
   ],

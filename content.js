@@ -146,6 +146,14 @@ const addButtonsToSections = () => {
           unorderedList.textContent = unorderedList.textContent.trim();
         }
 
+        const tables = sectionClone.querySelectorAll("table");
+        for (const table of tables) {
+          const markdownTable = htmlTableToMarkdown(table);
+          const replacementDiv = document.createElement("div");
+          replacementDiv.textContent = markdownTable;
+          table.replaceWith(replacementDiv);
+        }
+
         const textToCopy = sectionClone.textContent.trim();
 
         navigator.clipboard
