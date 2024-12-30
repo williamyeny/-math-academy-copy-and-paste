@@ -10,7 +10,7 @@
   "permissions": ["storage"],
   "content_scripts": [
     {
-      "matches": ["*://mathacademy.com/*"],
+      "matches": ["*://*.mathacademy.com/*"],
       "js": ["content.js", "mathmlToLatex.js", "htmlTableToMarkdown.js"],
       "css": ["injected.css"]
     }
